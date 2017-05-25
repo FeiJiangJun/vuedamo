@@ -37,6 +37,9 @@ var vm = new Vue({
         deletePerson: function(index){
             // 删一个数组元素
             this.people.splice(index,1);
+        },
+        back: function() {
+            window.location.href = "../index.jsp";
         }
     }
 })
