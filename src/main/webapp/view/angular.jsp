@@ -10,7 +10,7 @@
 <head>
     <title>Title</title>
     <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
-    <link rel="stylesheet" href="../css/demo.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <body>
 <div ng-app="myApp" ng-controller="myCtrl">
@@ -28,19 +28,17 @@
     </ul>
 
     <br>
-    <h1>选择网站:</h1>
-    <select ng-model="selectedSite">
-        <option ng-repeat="x in sites" value="{{x.url}}">{{x.site}}</option>
-    </select>
-
-    <h1>你选择的是: {{selectedSite}}</h1>
+    <select ng-model="selectedCar" ng-options="y.brand for (x, y) in cars"></select>
+    <h2>你选择的是: {{selectedCar.brand}}</h2>
+    <h2>型号为: {{selectedCar.model}}</h2>
+    <h2>颜色为: {{selectedCar.color}}</h2>
 </div>
 
 <script src="../js/angular.js"></script>
 
 <div class="form-group">
     <label></label>
-<input name="" type="button" value="back" onClick="javascript:back()" />
+<input class="btn btn-success" name="" type="button" value="back" onClick="javascript:back()" />
 </div>
 </body>
 </html>

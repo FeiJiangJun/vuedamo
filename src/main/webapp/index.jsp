@@ -9,11 +9,11 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="css/demo.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-<input name="" type="button" value="vue" onClick="javascript:vue()" />
-<input name="" type="button" value="ang" onClick="javascript:ang()" />
+<input class="btn btn-success" name="" type="button" value="vue" onClick="javascript:vue()" />
+<input class="btn btn-success" name="" type="button" value="ang" onClick="javascript:ang()" />
 
 <script language="JavaScript">
     function vue() {
