@@ -16,24 +16,26 @@
 <div ng-app="myApp" ng-controller="myCtrl">
     名字: <input ng-model="name">
     <h1>你输入了: {{name}}</h1>
+
+    <p>输入过滤:</p>
+
+    <p><input type="text" ng-model="test"></p>
+
+    <ul>
+        <li ng-repeat="x in names | filter:test | orderBy:'country'">
+            {{ (x.name | uppercase) + ', ' + x.country }}
+        </li>
+    </ul>
 </div>
 
-<script>
-    var app = angular.module('myApp', []);
-    app.controller('myCtrl', function($scope) {
-        $scope.name = "John Doe";
-    });
-</script>
+<script src="../js/angular.js"></script>
 
 <p>修改输入框的值，标题的名字也会相应修改。</p>
+
+
 <div class="form-group">
     <label></label>
 <input name="" type="button" value="back" onClick="javascript:back()" />
 </div>
 </body>
-<script language="JavaScript">
-    function back() {
-        window.location.href = "../index.jsp";
-    };
-</script>
 </html>
