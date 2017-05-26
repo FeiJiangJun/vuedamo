@@ -16,22 +16,27 @@
 <div ng-app="myApp" ng-controller="myCtrl">
     名字: <input ng-model="name">
     <h1>你输入了: {{name}}</h1>
+    <h2>修改输入框的值，标题的名字也会相应修改。</h2>
+    <br>
 
-    <p>输入过滤:</p>
-
+    <h1>输入过滤:</h1>
     <p><input type="text" ng-model="test"></p>
-
     <ul>
         <li ng-repeat="x in names | filter:test | orderBy:'country'">
             {{ (x.name | uppercase) + ', ' + x.country }}
         </li>
     </ul>
+
+    <br>
+    <h1>选择网站:</h1>
+    <select ng-model="selectedSite">
+        <option ng-repeat="x in sites" value="{{x.url}}">{{x.site}}</option>
+    </select>
+
+    <h1>你选择的是: {{selectedSite}}</h1>
 </div>
 
 <script src="../js/angular.js"></script>
-
-<p>修改输入框的值，标题的名字也会相应修改。</p>
-
 
 <div class="form-group">
     <label></label>

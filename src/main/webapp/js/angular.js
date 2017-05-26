@@ -9,6 +9,11 @@ app.controller('myCtrl', function($scope) {
         {name:'Hege',country:'Sweden'},
         {name:'Kai',country:'Denmark'}
     ];
+    $scope.sites = [
+        {site : "Google", url : "http://www.google.com"},
+        {site : "Runoob", url : "http://www.runoob.com"},
+        {site : "Taobao", url : "http://www.taobao.com"}
+    ];
 });
 
 function back() {
