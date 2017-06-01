@@ -10,10 +10,21 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body
+        {
+            background-image: url("img/xia.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    </style>
 </head>
 <body>
+<div align="center">
 <input class="btn btn-success" name="" type="button" value="vue" onClick="javascript:vue()" />
 <input class="btn btn-success" name="" type="button" value="ang" onClick="javascript:ang()" />
+<input class="btn btn-success" name="" type="button" value="vue-watch" onClick="javascript:watch()" />
+</div>
 
 <script language="JavaScript">
     function vue() {
@@ -21,7 +32,10 @@
     };
     function ang() {
         window.location.href = "view/angular.jsp";
-    }
+    };
+    function watch() {
+        window.location.href = "view/watch.jsp";
+    };
 
 </script>
 </body>
